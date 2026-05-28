@@ -182,7 +182,7 @@ nav {
 }
 
 .cta {
-  margin: 48px;
+  margin: 32px;
   background: #2452d8;
   color: white;
   padding: 40px;
@@ -201,7 +201,7 @@ nav {
 }
 
 .footer {
-  margin: 48px;
+  margin: 32px;
   background: white;
   padding: 48px;
   border-radius: 10px;
@@ -212,7 +212,7 @@ nav {
 
 .footer-links {
   display: flex;
-  gap: 90px;
+  gap: 64px;
 }
 
 .footer-links div {
@@ -233,7 +233,7 @@ nav {
 
   .footer {
     flex-direction: column;
-    gap: 40px;
+    gap: 32px;
   }
 
   .cta {
@@ -241,4 +241,19 @@ nav {
     gap: 20px;
     text-align: center;
   }
+  .wishlist-btn{
+  background:none;
+  border:none;
+  font-size:22px;
+  cursor:pointer;
+}
+
+.wishlist-btn.active{
+  color:red;
+}
+
+nav a.active{
+  color:#2452d8;
+  font-weight:600;
+}
 }
