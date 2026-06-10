@@ -301,7 +301,7 @@ nav {
 
 
 .cta {
-  margin: 32px;
+  margin: 8px;
   background: #2452d8;
   color: white;
   padding: 40px;
@@ -320,7 +320,7 @@ nav {
 }
 
 .footer {
-  margin: 32px;
+  margin: 8px;
   background: white;
   padding: 48px;
   border-radius: 10px;

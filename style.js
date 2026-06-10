@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-    // Wishlist
+   
 
     const wishlistButtons =
         document.querySelectorAll(".wishlist-btn");
