@@ -21,6 +21,11 @@ a {
   justify-content: space-between;
   align-items: center;
 }
+.date-container{
+    font-size:15px;
+    color:#555;
+    font-weight:600;
+}
 
 .logo {
   font-size: 32px;

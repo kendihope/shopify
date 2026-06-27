@@ -1,6 +1,31 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-   
+   // ==========================
+// LIVE DATE & TIME
+// ==========================
+
+function updateDate(){
+
+    const today = new Date();
+
+    const options = {
+        weekday: "long",
+        day: "numeric",
+        month: "long",
+        year: "numeric",
+        hour: "2-digit",
+        minute: "2-digit",
+        second: "2-digit"
+    };
+
+    document.getElementById("currentDate").textContent =
+        today.toLocaleDateString("en-GB", options);
+
+}
+
+updateDate();
+
+setInterval(updateDate,1000);
 
     const wishlistButtons =
         document.querySelectorAll(".wishlist-btn");
