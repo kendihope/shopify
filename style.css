@@ -371,21 +371,18 @@ nav a.active{
   color:#2452d8;
   font-weight:600;
 }
-/* ==========================
-   TABLETS (991px and below)
-========================== */
-@media (max-width: 991px){
+/* =====================================
+   RESPONSIVE DESIGN
+===================================== */
+
+/* ---------- Tablets ---------- */
+@media screen and (max-width: 992px){
 
     .navbar{
-        flex-wrap: wrap;
-        gap:20px;
         padding:20px;
-    }
-
-    .date-container{
-        order:1;
-        width:100%;
-        text-align:center;
+        flex-wrap:wrap;
+        justify-content:center;
+        gap:20px;
     }
 
     .logo{
@@ -394,6 +391,7 @@ nav a.active{
 
     nav{
         width:100%;
+        display:flex;
         justify-content:center;
         gap:20px;
         flex-wrap:wrap;
@@ -401,18 +399,20 @@ nav a.active{
 
     .nav-right{
         width:100%;
+        display:flex;
         justify-content:center;
+        gap:15px;
         flex-wrap:wrap;
     }
 
     .nav-right input{
         width:100%;
-        max-width:400px;
+        max-width:450px;
     }
 
     .hero{
         margin:20px;
-        padding:50px 30px;
+        padding:50px 40px;
         text-align:center;
     }
 
@@ -421,12 +421,11 @@ nav a.active{
     }
 
     .hero h1{
-        font-size:42px;
+        font-size:3rem;
     }
 
     .hero-buttons{
         justify-content:center;
-        flex-wrap:wrap;
     }
 
     .categories{
@@ -454,36 +453,42 @@ nav a.active{
 
 }
 
-/* ==========================
-   MOBILE (768px and below)
-========================== */
 
-@media (max-width:768px){
+/* ---------- Phones ---------- */
+
+@media screen and (max-width:768px){
 
     body{
         overflow-x:hidden;
     }
 
     .navbar{
+        padding:15px;
+        display:flex;
         flex-direction:column;
         align-items:center;
         gap:15px;
-        padding:20px;
+    }
+
+    .date-container{
+        width:100%;
+        text-align:center;
+        font-size:14px;
     }
 
     .logo{
-        font-size:26px;
+        font-size:24px;
     }
 
     nav{
-        flex-direction:column;
-        align-items:center;
-        gap:15px;
+        display:none;
     }
 
     .nav-right{
-        flex-direction:column;
         width:100%;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
         gap:15px;
     }
 
@@ -492,21 +497,24 @@ nav a.active{
     }
 
     .hero{
-        padding:40px 20px;
+        margin:15px;
+        padding:35px 20px;
     }
 
     .hero h1{
-        font-size:34px;
+        font-size:2.2rem;
         line-height:1.2;
     }
 
     .hero p{
         font-size:15px;
+        line-height:1.6;
     }
 
     .hero-buttons{
+        display:flex;
         flex-direction:column;
-        width:100%;
+        gap:12px;
     }
 
     .hero-buttons button{
@@ -514,27 +522,56 @@ nav a.active{
     }
 
     .section{
-        padding:20px;
+        padding:20px 15px;
     }
 
-    .categories,
+    .section h2{
+        text-align:center;
+    }
+
+    .categories{
+        grid-template-columns:1fr 1fr;
+        gap:15px;
+    }
+
+    .category-card img{
+        height:170px;
+        object-fit:cover;
+    }
+
     .products{
         grid-template-columns:1fr;
+        gap:20px;
+    }
+
+    .product-card{
+        padding:15px;
     }
 
     .product-card img{
-        height:280px;
+        height:300px;
+        object-fit:cover;
     }
 
     .wishlist-btn{
-        width:38px;
-        height:38px;
+        top:20px;
+        right:20px;
+    }
+
+    .price{
         font-size:20px;
     }
 
+    .cart-btn{
+        width:100%;
+    }
+
     .cta{
-        margin:20px;
+        margin:15px;
         padding:30px 20px;
+        flex-direction:column;
+        text-align:center;
+        gap:20px;
     }
 
     .cta button{
@@ -542,40 +579,71 @@ nav a.active{
     }
 
     .footer{
-        margin:20px;
-        padding:30px 20px;
+        margin:15px;
+        padding:25px;
         text-align:center;
     }
 
     .footer-links{
-        flex-direction:column;
-        gap:30px;
-        text-align:center;
+        display:grid;
+        grid-template-columns:1fr;
+        gap:25px;
     }
 
 }
 
-/* ==========================
-   SMALL PHONES (480px and below)
-========================== */
 
-@media (max-width:480px){
+/* ---------- Small Phones ---------- */
 
-    .hero h1{
-        font-size:28px;
+@media screen and (max-width:480px){
+
+    .navbar{
+        padding:15px 10px;
     }
 
     .logo{
-        font-size:22px;
+        font-size:20px;
+    }
+
+    .dot{
+        width:10px;
+        height:10px;
     }
 
     .date-container{
         font-size:13px;
-        padding:10px;
+        padding:8px;
     }
 
-    .product-card{
-        padding:12px;
+    .hero{
+        margin:10px;
+        padding:30px 18px;
+    }
+
+    .hero h1{
+        font-size:1.9rem;
+    }
+
+    .hero p{
+        font-size:14px;
+    }
+
+    .primary,
+    .secondary{
+        padding:14px;
+        width:100%;
+    }
+
+    .categories{
+        grid-template-columns:1fr;
+    }
+
+    .category-card img{
+        height:220px;
+    }
+
+    .product-card img{
+        height:260px;
     }
 
     .price{
@@ -583,8 +651,12 @@ nav a.active{
     }
 
     .cart-btn{
-        padding:12px;
         font-size:15px;
+        padding:12px;
+    }
+
+    .footer{
+        padding:20px;
     }
 
 }
