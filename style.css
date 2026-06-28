@@ -371,4 +371,221 @@ nav a.active{
   color:#2452d8;
   font-weight:600;
 }
+/* ==========================
+   TABLETS (991px and below)
+========================== */
+@media (max-width: 991px){
+
+    .navbar{
+        flex-wrap: wrap;
+        gap:20px;
+        padding:20px;
+    }
+
+    .date-container{
+        order:1;
+        width:100%;
+        text-align:center;
+    }
+
+    .logo{
+        font-size:28px;
+    }
+
+    nav{
+        width:100%;
+        justify-content:center;
+        gap:20px;
+        flex-wrap:wrap;
+    }
+
+    .nav-right{
+        width:100%;
+        justify-content:center;
+        flex-wrap:wrap;
+    }
+
+    .nav-right input{
+        width:100%;
+        max-width:400px;
+    }
+
+    .hero{
+        margin:20px;
+        padding:50px 30px;
+        text-align:center;
+    }
+
+    .hero-content{
+        max-width:100%;
+    }
+
+    .hero h1{
+        font-size:42px;
+    }
+
+    .hero-buttons{
+        justify-content:center;
+        flex-wrap:wrap;
+    }
+
+    .categories{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .products{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .cta{
+        flex-direction:column;
+        gap:20px;
+        text-align:center;
+    }
+
+    .footer{
+        flex-direction:column;
+        gap:40px;
+    }
+
+    .footer-links{
+        justify-content:space-between;
+    }
+
+}
+
+/* ==========================
+   MOBILE (768px and below)
+========================== */
+
+@media (max-width:768px){
+
+    body{
+        overflow-x:hidden;
+    }
+
+    .navbar{
+        flex-direction:column;
+        align-items:center;
+        gap:15px;
+        padding:20px;
+    }
+
+    .logo{
+        font-size:26px;
+    }
+
+    nav{
+        flex-direction:column;
+        align-items:center;
+        gap:15px;
+    }
+
+    .nav-right{
+        flex-direction:column;
+        width:100%;
+        gap:15px;
+    }
+
+    .nav-right input{
+        width:100%;
+    }
+
+    .hero{
+        padding:40px 20px;
+    }
+
+    .hero h1{
+        font-size:34px;
+        line-height:1.2;
+    }
+
+    .hero p{
+        font-size:15px;
+    }
+
+    .hero-buttons{
+        flex-direction:column;
+        width:100%;
+    }
+
+    .hero-buttons button{
+        width:100%;
+    }
+
+    .section{
+        padding:20px;
+    }
+
+    .categories,
+    .products{
+        grid-template-columns:1fr;
+    }
+
+    .product-card img{
+        height:280px;
+    }
+
+    .wishlist-btn{
+        width:38px;
+        height:38px;
+        font-size:20px;
+    }
+
+    .cta{
+        margin:20px;
+        padding:30px 20px;
+    }
+
+    .cta button{
+        width:100%;
+    }
+
+    .footer{
+        margin:20px;
+        padding:30px 20px;
+        text-align:center;
+    }
+
+    .footer-links{
+        flex-direction:column;
+        gap:30px;
+        text-align:center;
+    }
+
+}
+
+/* ==========================
+   SMALL PHONES (480px and below)
+========================== */
+
+@media (max-width:480px){
+
+    .hero h1{
+        font-size:28px;
+    }
+
+    .logo{
+        font-size:22px;
+    }
+
+    .date-container{
+        font-size:13px;
+        padding:10px;
+    }
+
+    .product-card{
+        padding:12px;
+    }
+
+    .price{
+        font-size:18px;
+    }
+
+    .cart-btn{
+        padding:12px;
+        font-size:15px;
+    }
+
+}
 }
