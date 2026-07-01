@@ -47,29 +47,42 @@ setInterval(updateDate,1000);
 
     });
 
-    // Add To Cart
+    
 
-    const cartButtons =
-        document.querySelectorAll(".cart-btn");
+let cartCount = 0;
 
-    cartButtons.forEach(button => {
+const cartCounter = document.getElementById("cartCount");
 
-        button.addEventListener("click", () => {
+const cartButtons = document.querySelectorAll(".cart-btn");
 
-            if(button.classList.contains("added")){
+cartButtons.forEach(button => {
 
-                button.classList.remove("added");
-                button.innerHTML = "Add to Cart";
+    button.addEventListener("click", () => {
 
-            }else{
+        if(button.classList.contains("added")){
 
-                button.classList.add("added");
-                button.innerHTML = "✓ Added";
+            button.classList.remove("added");
 
-            }
+            button.innerHTML = "Add to Cart";
 
-        });
+            cartCount--;
+
+        }else{
+
+            button.classList.add("added");
+
+            button.innerHTML = "✓ Added";
+
+            cartCount++;
+
+        }
+
+        if(cartCount < 0){
+            cartCount = 0;
+        }
+
+        cartCounter.textContent = cartCount;
 
     });
-    
+
 });
