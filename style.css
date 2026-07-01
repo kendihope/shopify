@@ -409,7 +409,7 @@ nav {
 nav a.active{
   color:#2452d8;
   font-weight:600;
-
+}
 
 /* ---------- Tablets ---------- */
 @media screen and (max-width: 992px){
@@ -530,7 +530,7 @@ nav a.active{
 
     .nav-right input{
         width:100%;
-    }
+        direction:ltr;    }
 
     .hero{
         margin:15px;
