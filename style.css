@@ -634,16 +634,14 @@ nav a.active{
         width:100%;
     }
 
-    .categories{
-        grid-template-columns:1fr;
-    }
+  
 
     .category-card img{
-        height:220px;
+        height:180px;
     }
 
     .product-card img{
-        height:260px;
+        height:180px;
     }
 
     .price{
