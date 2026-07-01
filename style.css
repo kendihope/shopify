@@ -586,7 +586,7 @@ nav a.active{
 
     .footer-links{
         display:grid;
-        grid-template-columns:1fr;
+        grid-template-columns:auto auto auto;
         gap:12px;
     }
 
@@ -654,7 +654,7 @@ nav a.active{
     }
 
     .footer{
-        padding:20px;
+        padding:12px;
     }
 
 }
