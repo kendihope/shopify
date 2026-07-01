@@ -1,8 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-   // ==========================
-// LIVE DATE & TIME
-// ==========================
 
 function updateDate(){
 
@@ -74,5 +71,29 @@ setInterval(updateDate,1000);
         });
 
     });
+    // ============================
+// MOBILE MENU
+// ============================
 
+const menuToggle = document.getElementById("menuToggle");
+
+const mobileNav = document.getElementById("mobileNav");
+
+menuToggle.addEventListener("click",()=>{
+
+    mobileNav.classList.toggle("active");
+
+    if(menuToggle.innerHTML==="☰"){
+
+        menuToggle.innerHTML="✕
+
+";
+
+    }else{
+
+        menuToggle.innerHTML="☰";
+
+    }
+
+});
 });
