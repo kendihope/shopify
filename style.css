@@ -88,6 +88,7 @@ nav {
   display: flex;
   align-items: center;
   gap: 18px;
+  flex-direction: row;
 }
 
 .nav-right input {
@@ -444,6 +445,7 @@ nav a.active{
     .nav-right input{
         width:100%;
         max-width:450px;
+        flex-direction:row;
     }
 
     .hero{
@@ -523,7 +525,7 @@ nav a.active{
     .nav-right{
         width:100%;
         display:flex;
-        flex-direction:column;
+        flex-direction:row;
         align-items:center;
         gap:15px;
     }
@@ -616,7 +618,7 @@ nav a.active{
 
     .footer{
         margin:15px;
-        padding:25px;
+        padding:8px;
         text-align:center;
     }
 
