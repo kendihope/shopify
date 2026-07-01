@@ -443,7 +443,7 @@ nav a.active{
     }
 
     .nav-right input{
-        width:100%;
+        width:50%;
         max-width:450px;
         flex-direction:row;
     }
@@ -503,8 +503,8 @@ nav a.active{
     .navbar{
         padding:12px;
         display:flex;
-        flex-direction:column;
-        align-items:center;
+        flex-direction:row;
+        align-items:left;
         gap:15px;
     }
 
@@ -524,14 +524,13 @@ nav a.active{
 
     .nav-right{
         width:100%;
-        display:flex;
         flex-direction:row;
         align-items:center;
         gap:15px;
     }
 
     .nav-right input{
-        width:100%;
+        width:50%;
         direction:ltr;    }
 
     .hero{
