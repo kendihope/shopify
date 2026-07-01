@@ -1,87 +1,110 @@
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", function () {
 
+    // ==========================
+    // LIVE DATE & TIME
+    // ==========================
 
-function updateDate(){
+    function updateDate() {
+        const today = new Date();
 
-    const today = new Date();
+        const options = {
+            weekday: "long",
+            day: "numeric",
+            month: "long",
+            year: "numeric",
+            hour: "2-digit",
+            minute: "2-digit",
+            second: "2-digit"
+        };
 
-    const options = {
-        weekday: "long",
-        day: "numeric",
-        month: "long",
-        year: "numeric",
-        hour: "2-digit",
-        minute: "2-digit",
-        second: "2-digit"
-    };
+        const dateElement = document.getElementById("currentDate");
 
-    document.getElementById("currentDate").textContent =
-        today.toLocaleDateString("en-GB", options);
+        if (dateElement) {
+            dateElement.textContent = today.toLocaleDateString("en-GB", options);
+        }
+    }
 
-}
+    updateDate();
+    setInterval(updateDate, 1000);
 
-updateDate();
+    // ==========================
+    // MOBILE MENU
+    // ==========================
 
-setInterval(updateDate,1000);
+    const menuToggle = document.getElementById("menuToggle");
+    const mobileNav = document.getElementById("mobileNav");
 
-    const wishlistButtons =
-        document.querySelectorAll(".wishlist-btn");
+    if (menuToggle && mobileNav) {
+
+        menuToggle.addEventListener("click", function () {
+
+            mobileNav.classList.toggle("active");
+
+            if (mobileNav.classList.contains("active")) {
+                menuToggle.innerHTML = "✕";
+            } else {
+                menuToggle.innerHTML = "☰";
+            }
+
+        });
+
+    }
+
+    // ==========================
+    // WISHLIST
+    // ==========================
+
+    const wishlistButtons = document.querySelectorAll(".wishlist-btn");
 
     wishlistButtons.forEach(button => {
 
-        button.addEventListener("click", () => {
+        button.addEventListener("click", function () {
 
-            button.classList.toggle("active");
+            this.classList.toggle("active");
 
-            if(button.classList.contains("active")){
-
-                button.innerHTML = "♥";
-
-            }else{
-
-                button.innerHTML = "♡";
-
-            }
+            this.innerHTML = this.classList.contains("active") ? "♥" : "♡";
 
         });
 
     });
 
-    
+    // ==========================
+    // CART
+    // ==========================
 
-let cartCount = 0;
+    let cartCount = 0;
 
-const cartCounter = document.getElementById("cartCount");
+    const cartCounter = document.getElementById("cartCount");
 
-const cartButtons = document.querySelectorAll(".cart-btn");
+    const cartButtons = document.querySelectorAll(".cart-btn");
 
-cartButtons.forEach(button => {
+    cartButtons.forEach(button => {
 
-    button.addEventListener("click", () => {
+        button.addEventListener("click", function () {
 
-        if(button.classList.contains("added")){
+            if (this.classList.contains("added")) {
 
-            button.classList.remove("added");
+                this.classList.remove("added");
+                this.innerHTML = "Add to Cart";
+                cartCount--;
 
-            button.innerHTML = "Add to Cart";
+            } else {
 
-            cartCount--;
+                this.classList.add("added");
+                this.innerHTML = "✓ Added";
+                cartCount++;
 
-        }else{
+            }
 
-            button.classList.add("added");
+            if (cartCount < 0) {
+                cartCount = 0;
+            }
 
-            button.innerHTML = "✓ Added";
+            if (cartCounter) {
+                cartCounter.textContent = cartCount;
+            }
 
-            cartCount++;
-
-        }
-
-        if(cartCount < 0){
-            cartCount = 0;
-        }
-
-        cartCounter.textContent = cartCount;
+        });
 
     });
 
