@@ -463,7 +463,7 @@ nav a.active{
     }
 
     .navbar{
-        padding:15px;
+        padding:12px;
         display:flex;
         flex-direction:column;
         align-items:center;
@@ -473,11 +473,11 @@ nav a.active{
     .date-container{
         width:100%;
         text-align:center;
-        font-size:14px;
+        font-size:8px;
     }
 
     .logo{
-        font-size:24px;
+        font-size:14px;
     }
 
     nav{
@@ -514,7 +514,7 @@ nav a.active{
     .hero-buttons{
         display:flex;
         flex-direction:column;
-        gap:12px;
+        gap:8px;
     }
 
     .hero-buttons button{
@@ -540,8 +540,8 @@ nav a.active{
     }
 
     .products{
-        grid-template-columns:1fr;
-        gap:20px;
+        display:inline-grid;
+        gap: 12px;
     }
 
     .product-card{
@@ -549,7 +549,7 @@ nav a.active{
     }
 
     .product-card img{
-        height:300px;
+        height:150px;
         object-fit:cover;
     }
 
@@ -559,7 +559,7 @@ nav a.active{
     }
 
     .price{
-        font-size:20px;
+        font-size:14px;
     }
 
     .cart-btn{
@@ -587,7 +587,7 @@ nav a.active{
     .footer-links{
         display:grid;
         grid-template-columns:1fr;
-        gap:25px;
+        gap:12px;
     }
 
 }
